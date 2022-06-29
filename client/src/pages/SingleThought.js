@@ -1,6 +1,11 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const SingleThought = props => {
+  // useParams gets the parameter from the url and documentation says that it returns a key-value pair. So...I guess it populates the value in the key-value pair with the parameter?
+  const { id: thoughtId } = useParams();
+  console.log(thoughtId);
+
   return (
     <div>
       <div className="card mb-3">
