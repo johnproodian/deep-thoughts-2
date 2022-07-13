@@ -13,11 +13,8 @@ const Home = () => {
   // Whenever the home component in the app is loaded, the query above is executed and the data--as it comes in--is stored in the data property above, for use below
 
   const { data: userData } = useQuery(QUERY_ME_BASIC);
-  console.log(data);
-  console.log(userData);
 
   const thoughts = data?.thoughts || [];
-  console.log(thoughts);
 
   const loggedIn = Auth.loggedIn();
 
